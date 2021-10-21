@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A3FB96E2720E8AF00B7F4D6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3FB96D2720E8AF00B7F4D6 /* SearchViewController.swift */; };
 		3AB68598271DF0FB008E7F71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB68597271DF0FB008E7F71 /* AppDelegate.swift */; };
 		3AB6859A271DF0FB008E7F71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB68599271DF0FB008E7F71 /* SceneDelegate.swift */; };
 		3AB6859C271DF0FB008E7F71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6859B271DF0FB008E7F71 /* ViewController.swift */; };
@@ -14,9 +15,16 @@
 		3AB685A2271DF0FB008E7F71 /* SeSacDay13Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AB685A0271DF0FB008E7F71 /* SeSacDay13Project.xcdatamodeld */; };
 		3AB685A4271DF0FD008E7F71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB685A3271DF0FD008E7F71 /* Assets.xcassets */; };
 		3AB685A7271DF0FD008E7F71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB685A5271DF0FD008E7F71 /* LaunchScreen.storyboard */; };
+		3AB685B5271E0087008E7F71 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB685B4271E0087008E7F71 /* MainViewController.swift */; };
+		3AB685B7271E00B5008E7F71 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB685B6271E00B5008E7F71 /* MainTableViewCell.swift */; };
+		3AE5828827218FD500EB41D3 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5828627218FD500EB41D3 /* SearchTableViewCell.swift */; };
+		3AE5828D2721AAAB00EB41D3 /* CastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5828C2721AAAB00EB41D3 /* CastViewController.swift */; };
+		3AE5828F2721AD4400EB41D3 /* CastNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5828E2721AD4400EB41D3 /* CastNavigationController.swift */; };
+		3AE582912721AE9F00EB41D3 /* CastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE582902721AE9F00EB41D3 /* CastTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A3FB96D2720E8AF00B7F4D6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3AB68594271DF0FB008E7F71 /* SeSacDay13Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSacDay13Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB68597271DF0FB008E7F71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AB68599271DF0FB008E7F71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +34,12 @@
 		3AB685A3271DF0FD008E7F71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AB685A6271DF0FD008E7F71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AB685A8271DF0FD008E7F71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AB685B4271E0087008E7F71 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3AB685B6271E00B5008E7F71 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		3AE5828627218FD500EB41D3 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		3AE5828C2721AAAB00EB41D3 /* CastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastViewController.swift; sourceTree = "<group>"; };
+		3AE5828E2721AD4400EB41D3 /* CastNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastNavigationController.swift; sourceTree = "<group>"; };
+		3AE582902721AE9F00EB41D3 /* CastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +74,15 @@
 			children = (
 				3AB68597271DF0FB008E7F71 /* AppDelegate.swift */,
 				3AB68599271DF0FB008E7F71 /* SceneDelegate.swift */,
+				3AE5828627218FD500EB41D3 /* SearchTableViewCell.swift */,
 				3AB6859B271DF0FB008E7F71 /* ViewController.swift */,
 				3AB6859D271DF0FB008E7F71 /* Main.storyboard */,
+				3AE582902721AE9F00EB41D3 /* CastTableViewCell.swift */,
+				3AE5828E2721AD4400EB41D3 /* CastNavigationController.swift */,
+				3AE5828C2721AAAB00EB41D3 /* CastViewController.swift */,
+				3A3FB96D2720E8AF00B7F4D6 /* SearchViewController.swift */,
+				3AB685B6271E00B5008E7F71 /* MainTableViewCell.swift */,
+				3AB685B4271E0087008E7F71 /* MainViewController.swift */,
 				3AB685A3271DF0FD008E7F71 /* Assets.xcassets */,
 				3AB685A5271DF0FD008E7F71 /* LaunchScreen.storyboard */,
 				3AB685A8271DF0FD008E7F71 /* Info.plist */,
@@ -141,10 +162,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AE5828827218FD500EB41D3 /* SearchTableViewCell.swift in Sources */,
 				3AB6859C271DF0FB008E7F71 /* ViewController.swift in Sources */,
 				3AB68598271DF0FB008E7F71 /* AppDelegate.swift in Sources */,
+				3AE5828D2721AAAB00EB41D3 /* CastViewController.swift in Sources */,
+				3A3FB96E2720E8AF00B7F4D6 /* SearchViewController.swift in Sources */,
 				3AB685A2271DF0FB008E7F71 /* SeSacDay13Project.xcdatamodeld in Sources */,
+				3AE5828F2721AD4400EB41D3 /* CastNavigationController.swift in Sources */,
 				3AB6859A271DF0FB008E7F71 /* SceneDelegate.swift in Sources */,
+				3AE582912721AE9F00EB41D3 /* CastTableViewCell.swift in Sources */,
+				3AB685B7271E00B5008E7F71 /* MainTableViewCell.swift in Sources */,
+				3AB685B5271E0087008E7F71 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
