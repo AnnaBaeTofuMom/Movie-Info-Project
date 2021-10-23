@@ -34,6 +34,18 @@ class MainViewController: UIViewController {
     }
     
 
+    @IBAction func listButtomClicked(_ sender: Any) {
+        guard let tvc = self.storyboard?.instantiateViewController(withIdentifier: "TheaterListViewController") else { return
+        }
+        
+        tvc.modalPresentationStyle = .fullScreen
+        
+        self.present(tvc, animated: true)
+        
+        print("clicked")
+    }
+    
+
     
 }
 
