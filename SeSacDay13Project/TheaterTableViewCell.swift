@@ -8,8 +8,17 @@
 import UIKit
 
 class TheaterTableViewCell: UITableViewCell {
-
-    @IBOutlet var theaterNameLabel: UIView!
+    
+    var identifier = "TheaterTableViewCell"
+    
+    
+    @IBOutlet var theaterNameLabel: UILabel!
+    
+    @IBOutlet var theaterAddressLabel: UILabel!
+    @IBOutlet var viewMapButton: UIButton!
+    
+    @IBOutlet var contactNumberLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +30,9 @@ class TheaterTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func viewMapButtonClicked(_ sender: Any) {
+        print("클릭됨")
+        
+    
+    }
 }

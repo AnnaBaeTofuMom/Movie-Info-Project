@@ -12,30 +12,22 @@ import CoreLocation
 import CoreLocationUI
 
 class MapViewController: UIViewController {
-    @IBOutlet var locationSearchBar: UISearchBar!
-    
-    @IBOutlet var closeButton: UIButton!
+
     @IBOutlet var mapView: MKMapView!
     
+    var alt: Double = 0
+    var lag: Double = 0
     
-    //1. LocationManager 인스턴스 만들어주기
     let locationManager = CLLocationManager()
-    
-    
-    func getUserLocation() {
-        locationManager.requestAlwaysAuthorization()
-        locationManager.startUpdatingLocation()
-        
-        
-    }
-    
-
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "내 현재 위치"
-        locationManager.delegate = self
+        
+        
+        
+        
+        
     }
     
     @IBAction func closeButtonClicked(_ sender: Any) {
