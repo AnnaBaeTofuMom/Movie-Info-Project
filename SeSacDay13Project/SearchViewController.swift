@@ -8,6 +8,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Kingfisher
 
 
 class SearchViewController: UIViewController, UITableViewDataSourcePrefetching {
@@ -24,7 +25,7 @@ class SearchViewController: UIViewController, UITableViewDataSourcePrefetching {
     
     //취소
     
-    var movieData: [String] = []
+    var movieData: [MovieModel] = []
     
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         print("cancel")
@@ -65,11 +66,11 @@ class SearchViewController: UIViewController, UITableViewDataSourcePrefetching {
     func fetchMovieData() {
         
         if let query = "스파이더맨".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
-            let url = "https://dapi.kakao.com/v2/search/web?query=\(query)&display=10&start=1"
+            let url = "https://openapi.naver.com/v1/search/movie.json?query=\(query)&display=10&start=1"
             
             let header: HTTPHeaders = [
-                "Authorization": "KakaoAK 3e39c69ae301b2973b54b9bc58253084",
-                "Content-Type": "application/x-www-form-urlencoded"
+                "X-Naver-Client-Id": "30E3ogxoMkHOdjhUWjB9",
+                "X-Naver-Client-Secret": "3YjZXcUZVG"
             ]
         
             
@@ -79,15 +80,22 @@ class SearchViewController: UIViewController, UITableViewDataSourcePrefetching {
                 let json = JSON(value)
                 print("JSON: \(json)")
                 
-                for item in json["documents"].arrayValue {
+                for item in json["items"].arrayValue {
                     
                     
-                    let value = item["title"].stringValue
-                    self.movieData.append(value)
-                    print(value)
+                    let value = item["title"].stringValue.replacingOccurrences(of: "<b>", with: "").replacingOccurrences(of: "</b>", with: "")
+                    let image = item["image"].stringValue
+                    let link = item["link"].stringValue
+                    let userRating = item["userRating"].stringValue
+                    let sub = item["subtitle"].stringValue
+                    
+                    let data = MovieModel(titleData: value, imageData: image, linkData: link, userRatingData: userRating, subtitle: sub)
+                    
+                    self.movieData.append(data)
+                    print(data)
                     
                 }
-                
+                //핵중요, 리로드 안해주면 아무것도 안뜨겠죠?
                 self.searchTableView.reloadData()
                 
                 print(self.movieData)
@@ -119,7 +127,11 @@ extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableCell", for: indexPath) as! SearchTableViewCell
     
-        cell.lbl1.text = movieData[indexPath.row]
+        cell.lbl1.text = movieData[indexPath.row].titleData
+        cell.lbl2.text = movieData[indexPath.row].subtitle
+        cell.lbl3.text = movieData[indexPath.row].userRatingData
+        let url = URL(string: movieData[indexPath.row].imageData)
+        cell.img.kf.setImage(with: url, placeholder: UIImage(named: "squid_game"))
         return cell
     }
     
