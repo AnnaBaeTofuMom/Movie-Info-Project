@@ -24,7 +24,11 @@ class SearchViewController: UIViewController, UITableViewDataSourcePrefetching {
         }
     }
     
+    
     //취소
+    func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
+        print("취소 : \(indexPaths)")
+    }
     
     var movieData: [MovieModel] = []
     
@@ -65,7 +69,7 @@ class SearchViewController: UIViewController, UITableViewDataSourcePrefetching {
     func fetchMovieData(query: String) {
         
         if let query = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
-            let url = "https://openapi.naver.com/v1/search/movie.json?query=\(query)&display=10&start=1"
+            let url = "https://openapi.naver.com/v1/search/movie.json?query=\(query)&display=10&start=\(startPage)"
             
             let header: HTTPHeaders = [
                 "X-Naver-Client-Id": "30E3ogxoMkHOdjhUWjB9",
@@ -125,11 +129,11 @@ extension SearchViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableCell", for: indexPath) as! SearchTableViewCell
-    
+        let url = URL(string: movieData[indexPath.row].imageData)
+        
         cell.lbl1.text = movieData[indexPath.row].titleData
         cell.lbl2.text = movieData[indexPath.row].subtitle
         cell.lbl3.text = movieData[indexPath.row].userRatingData
-        let url = URL(string: movieData[indexPath.row].imageData)
         cell.img.kf.setImage(with: url, placeholder: UIImage(named: "squid_game"))
         return cell
     }

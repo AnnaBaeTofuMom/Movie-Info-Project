@@ -13,6 +13,7 @@
 		3A5BF17F27279D8500B7F328 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3A5BF17E27279D8500B7F328 /* SwiftyJSON */; };
 		3A5BF1B82729BB7C00B7F328 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5BF1B72729BB7C00B7F328 /* MovieModel.swift */; };
 		3A5BF1BB2729BF6B00B7F328 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3A5BF1BA2729BF6B00B7F328 /* Kingfisher */; };
+		3A81607A272C253A00D792DC /* TrendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A816079272C253A00D792DC /* TrendModel.swift */; };
 		3A9C110A27248332000E5804 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9C110927248332000E5804 /* MapViewController.swift */; };
 		3A9C1110272493F2000E5804 /* TheaterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9C110F272493F2000E5804 /* TheaterListViewController.swift */; };
 		3A9C111627249ACE000E5804 /* TheaterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9C111527249ACE000E5804 /* TheaterTableViewCell.swift */; };
@@ -34,6 +35,7 @@
 		3A3FB96D2720E8AF00B7F4D6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3A456E112725F2090070AC11 /* TheaterInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterInformation.swift; sourceTree = "<group>"; };
 		3A5BF1B72729BB7C00B7F328 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		3A816079272C253A00D792DC /* TrendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendModel.swift; sourceTree = "<group>"; };
 		3A9C110927248332000E5804 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3A9C110F272493F2000E5804 /* TheaterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterListViewController.swift; sourceTree = "<group>"; };
 		3A9C111527249ACE000E5804 /* TheaterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterTableViewCell.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				3A5BF1B72729BB7C00B7F328 /* MovieModel.swift */,
 				3AB685B6271E00B5008E7F71 /* MainTableViewCell.swift */,
 				3AB685B4271E0087008E7F71 /* MainViewController.swift */,
+				3A816079272C253A00D792DC /* TrendModel.swift */,
 				3AB685A3271DF0FD008E7F71 /* Assets.xcassets */,
 				3AB685A5271DF0FD008E7F71 /* LaunchScreen.storyboard */,
 				3AB685A8271DF0FD008E7F71 /* Info.plist */,
@@ -207,6 +210,7 @@
 				3A9C110A27248332000E5804 /* MapViewController.swift in Sources */,
 				3A9C1110272493F2000E5804 /* TheaterListViewController.swift in Sources */,
 				3AB6859A271DF0FB008E7F71 /* SceneDelegate.swift in Sources */,
+				3A81607A272C253A00D792DC /* TrendModel.swift in Sources */,
 				3A456E122725F2090070AC11 /* TheaterInformation.swift in Sources */,
 				3AE582912721AE9F00EB41D3 /* CastTableViewCell.swift in Sources */,
 				3AB685B7271E00B5008E7F71 /* MainTableViewCell.swift in Sources */,
